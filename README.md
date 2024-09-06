@@ -20,11 +20,9 @@ Welcome to the **Resume Builder Website**! This project is designed to help user
 ## Technologies Used
 
 - **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB
-- **Authentication**: JWT (JSON Web Token)
+- **Authentication**: Local Storage
 - **PDF Generation**: `pdfkit` library
-- **Deployment**: Heroku (or your chosen hosting provider)
+- **Deployment**: Github
 
 ## Usage
 
