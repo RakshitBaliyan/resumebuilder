@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+
+nav {
+    background-color: #055b56;
+    padding: 6px 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav>h1{
+    color: white;
+    margin-top: 0;
+}
+.moreBtn{
+    display: flex;
+    gap: 3rem;
+}
+.moreBtn>p>a{
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+}
+.moreBtn>p>a:hover{
+    color: #66FCF1;
+    text-decoration: none;
+}
+button{
+    width: 150px;
+}

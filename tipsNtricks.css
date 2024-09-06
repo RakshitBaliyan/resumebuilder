@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 2em;
+    color: rgb(4, 71, 52);
+}
+header>p{
+    font-size: 1.25rem;
+}
+
+h1, h2 {
+    margin: 0.5em 0;
+}
+
+section {
+    padding: 2em;
+    margin: 1em auto;
+    width: 80%;
+    max-width: 1000px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#resume-tips, #interview-tips {
+    margin-bottom: 1.5em;
+}
+
+.tips-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tips-list li {
+    padding: 0.5em;
+    border-bottom: 1px solid #ddd;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    line-height: 1.5rem;
+    transform: translateX(-30px);
+}
+
+.tips-list li:hover {
+    background-color: #dadada;
+}
+
+.faq-item {
+    border-top: 1px solid #ddd;
+    margin: 1em 0;
+}
+
+.faq-question {
+    cursor: pointer;
+    padding: 1em;
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.faq-answer {
+    line-height: 1.5rem;
+    display: none;
+    padding: 1em;
+    background-color: #fafafa;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .faq-question {
+    background-color: #e0e0e0;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {opacity: 0; transform: translateX(-30px);}
+    to {opacity: 1; transform: translateX(0);}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.tips-list li {
+    animation: slideIn 0.6s ease-in-out forwards;
+}
+
+#faq .faq-item {
+    animation: fadeIn 1s ease-in-out;
+}
+.icon img {
+    width: 26px;
+    height: 26px;
+    fill: currentColor; /* Ensures the SVG takes the color of the text */
+}
+
+.faq-item.active .icon img {
+    transform: rotate(-180deg);
+    transition: transform 0.3s ease-in-out;
+}

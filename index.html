@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./button.css">
+  <title>CraftMyCV-Login/SignUp</title>
+</head>
+<body>
+  <div class="heading">
+    <h1 id="head">CraftMyCV</h1>
+    <p id="para">"Craft Your Perfect Resume with Ease and Precision."</p>
+  </div>
+  <div class="container">
+    <div class="form-container">
+      <!-- Signup Form -->
+      <form id="signupForm">
+        <h2>Sign Up</h2>
+        <input type="text" id="fullNameSignup" placeholder="Enter your full name" required>
+        <input type="text" id="signupUsername" placeholder="Username" required>
+        <input type="password" id="signupPassword" placeholder="Password" required>
+        <button class="button-27" type="submit">Sign Up</button>
+        <p>Already have an account? <a href="#" id="showLoginForm">Log In</a></p>
+      </form>
+
+      <!-- Login Form -->
+      <form id="loginForm" style="display: none;">
+        <h2>Log In</h2>
+        <input type="text" id="loginUsername" placeholder="Username" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button class="button-27" type="submit">Log In</button>
+        <p>Don't have an account? <a href="#" id="showSignupForm">Sign Up</a></p>
+      </form>
+    </div>
+  </div>
+  
+  <script src="./index.js"></script>
+</body>
+</html>
+
+

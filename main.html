@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./button.css">
+    <!-- Include jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- Include html2canvas library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    
+</head>
+<body>
+    <nav>
+        <h1>CraftMyCV</h1>
+        <div class="moreBtn">
+            <p><a href="./home.html">Home</a></p>
+            <p><a href="./findjob.html">Jobs for You</a></p>
+            <p><a href="./tipsNtricks.html">Tips & Tricks</a></p>
+            <p><a href="./home.html">Contact Us</a></p>
+        </div>
+        <button class="button-89" id="logoutButton" style="font-weight: 600;">Logout</button>
+    </nav>
+    <div class="container">
+        <div class="sidebar">
+            <p style="font-size: 1rem; font-weight: 500;color: #1F2833; padding: 4px; ">** Fill up each section one by one to create your Resume **</p>
+            <button onclick="showSection('personalInfoSection')">Personal Info</button>
+            <button onclick="showSection('educationSection')">Educational Info</button>
+            <button onclick="showSection('experienceSection')">Experience</button>
+            <button onclick="showSection('skillsSection')">Skills</button>
+            <button onclick="showSection('hobbiesSection')">Hobbies</button>
+            <button onclick="showSection('customSection')">Custom Section</button>
+            <button onclick="captureAndDownloadAsPDF()" id="downloadBtn">Download Resume</button>
+        </div>
+        <div class="content">
+            <!-- Personal Info Section -->
+            <div id="personalInfoSection" class="form-section">
+                <h2>Personal Info</h2>
+                <label>Name: <input type="text" id="fullName"></label>
+                <label>Address: <input type="text" id="address"></label>
+                <label>Phone: <input type="text" id="phone"></label>
+                <label>Email: <input type="email" id="email"></label>
+                <label>Nationality: 
+                    <select id="nationality">
+                        <option value="">Select Country</option>
+                        <option value="India">India</option>
+                        <option value="USA">USA</option>
+                        <option value="UK">UK</option>
+                        <!-- Add more countries as needed -->
+                    </select>
+                </label>
+                <label>Religion: <input type="text" id="religion"></label>
+                <label>Marital Status: <input type="text" id="maritalStatus"></label>
+                <label>Photo: <input type="file" id="photo" accept="image/*"></label>
+                <button onclick="addPersonalInfo()">Add</button>
+            </div>
+
+            <!-- Education Info Section -->
+            <div id="educationSection" class="form-section">
+                <h2>Educational Info</h2>
+                <label>Institution: <input type="text" id="institution"></label>
+                <label>Degree: <input type="text" id="degree"></label>
+                <label>Year of Graduation: <input type="text" id="graduationYear"></label>
+                <button onclick="addEducationInfo()">Add</button>
+            </div>
+
+            <!-- Experience Section -->
+            <div id="experienceSection" class="form-section">
+                <h2>Experience</h2>
+                <label>Company: <input type="text" id="company"></label>
+                <label>Role: <input type="text" id="role"></label>
+                <label>Years: <input type="text" id="years"></label>
+                <button onclick="addExperience()">Add</button>
+            </div>
+
+            <!-- Skills Section -->
+            <div id="skillsSection" class="form-section">
+                <h2>Skills</h2>
+                <label>Skill: <input type="text" id="skill"></label>
+                <button onclick="addSkill()">Add</button>
+            </div>
+
+            <!-- Hobbies Section -->
+            <div id="hobbiesSection" class="form-section">
+                <h2>Hobbies</h2>
+                <label>Hobby: <input type="text" id="hobby"></label>
+                <button onclick="addHobby()">Add</button>
+            </div>
+
+            <!-- Custom Section -->
+            <div id="customSection" class="form-section">
+                <h2>Custom Section</h2>
+                <label>Heading: <input type="text" id="customHeading"></label>
+                <label>Subheading: <input type="text" id="customSubheading"></label>
+                <label>Details: <input type="text" id="customDetails"></label>
+                <button onclick="addCustomSection()">Add</button>
+            </div>
+            
+            
+        </div>
+        <div class="resume-template" id="resumeContent">
+            <div id="profilePhotoContainer"></div>
+            <h1 style="text-align: center; font-size: 2rem;">Resume</h1>
+            <!-- Dynamically filled content will appear here -->
+            
+        </div>
+        
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

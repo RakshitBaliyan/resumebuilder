@@ -1,0 +1,253 @@
+        /*Nav CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+.svg-container {
+    overflow: hidden; /* Ensures no scrollbar is shown during the animation */
+  }
+#welcomeHeading{
+    text-align: left;
+    margin-top: 1rem;
+    color: #0a5c58;
+    font-size: 1.25rem;
+    overflow: hidden; /* Ensures no scrollbar is shown during the animation */
+    white-space: nowrap; 
+}
+#welcomeLine{
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #0a5c58;
+    font-size: 4rem;
+    overflow: hidden; /* Ensures no scrollbar is shown during the animation */
+    white-space: nowrap; 
+}
+#welcomePara{
+    text-align: left;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 1.50rem;
+}
+/* rating slider */
+.sliderText{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #055b56;
+    margin-bottom: 2rem;
+    margin-top: -1rem;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 200px; /* Adjust height as needed */
+  }
+  
+  .slider {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    animation: slide 10s linear infinite;
+  }
+  
+  .slide {
+    min-width: 200px; /* Adjust width as needed */
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  .profile-card {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  
+.comment-card {
+    position: absolute;
+    top: 5px; /* Adjust as needed */
+    right: 5px; /* Adjust as needed */
+    background: #fff;
+    border: 1px solid #000000;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    width: 150px; /* Adjust width as needed */
+    text-align: center;
+    transform: translateY(-80px); /* Slightly above the photo */
+    z-index: 10; /* Ensure it appears above the profile photo */
+  }
+  .profile-card:hover .comment-card {
+    opacity: 1;
+    transform: translateY(0px); 
+  }
+/* Hiring partners */
+
+  
+.hired-by-section {
+  height: 250px;
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to bottom, #04413e, #147f7a); /* Light to deep blue gradient */
+  border-top-left-radius: 30px;  /* Rounded upper left corner */
+  border-top-right-radius: 30px; /* Rounded upper right corner */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);  /* Subtle shadow for elevation */
+}
+
+.hired-by-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #fff; /* White text for contrast */
+}
+
+.company-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.company-logos .logo {
+  width: 120px; /* Adjust size as necessary */
+  height: 55px;
+  padding: 10px;
+  display: flex;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-logos .logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Contact us section */
+
+.contact-section {
+  background: url(./assets/contactbg.png);/* Light to deep blue gradient */
+  border-top-left-radius: 30px;  /* Rounded upper left corner */
+  border-top-right-radius: 30px;
+  color: #000000; /* White text */
+  padding: 20px 20px 0px 20px;
+  text-align: center;
+  position: relative;
+  transform: translateY(-30px);
+  background-size: cover;
+  font-weight: 700;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-left, .contact-right {
+  width: 45%;
+}
+.contact-left{
+  transform: translateX(-160px);
+}
+.contact-left h2 {
+  margin-bottom: 50px;
+}
+
+.contact-info h3 {
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}
+
+.social-icons img {
+  width: 40px;
+}
+
+.affiliation img {
+  width: 150px;
+  margin-top: 10px;
+}
+
+.footer {
+  border-top: 1px solid #444;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* Fade In and out effect */
+
+.fade {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+/* Ensures the effect applies to the entire page */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
